@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+    <main>
+        <form action="/create" method="post">
+            <input class="title" type="text" placeholder="enter your task title" name="title" />
+            <textarea placeholder="enter your task details" name="details"></textarea>
+            <input class="submit" type="submit" value="create task">
+        </form>
+        <div class="task">
+            <% console.log(files) %>
+            <% if(files.length > 0){ %>
+                <% files.forEach((val)=>{ %>
+                    <div class="task-card">
+                        <h3><%= val %></h3>
+                        <div>
+                            <a href="/file/<%= val %>">Read more</a>
+                            <a href="/edit/<%= val %>">Edit Filename</a>
+                        </div>
+                    </div>
+                <% }) %>
+           <% } else{ %>
+            <div class="no-task-msg">
+                <h2>No Task Yet.</h2>
+            </div>
+           <% } %>
+        </div>
+    </main>
+</body>
+</html>

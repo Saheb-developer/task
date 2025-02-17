@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+    <style>
+
+    </style>
+    <main>
+        <div>
+            <a href="/">Go Back To Home</a>
+            <form action="/edit" method="post">
+                <input class="previous" type="text" placeholder="previous file name" name="previous" value="<%= fileName %>" />
+                <input type="text" placeholder="new filename" name="newFileName"></input>
+                <input class="update" type="submit" value="Update Name">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
